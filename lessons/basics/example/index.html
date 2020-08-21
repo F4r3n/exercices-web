@@ -1,0 +1,39 @@
+<html>
+<head>
+
+</head>
+<body>
+    <script type="text/javascript">
+        let value
+        console.log(value) // undefined
+        value = 1
+        console.log(value) // 1
+        value = "test"
+        console.log(value) //test
+        value = 1
+
+        //A const cannot be changed after being assigned
+        const result = value + 1
+        console.log(result) // 2
+        //result = 5 // error
+
+        //let or var ?
+        function test() { //The function will be checked after
+            {
+                let b = 5
+                var a = 5;
+                const c = 6
+            }
+            //console.log(b) // b is not defined
+            console.log(a)
+            //console.log(c) // c is not defined
+            //The scope of b is {}
+            //The scope of a is the function
+
+        }
+        test();
+
+    </script>
+</body>
+
+</html>
