@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="calculus.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+        <div style="display:inline-block;">
+            <input type="number" id="a" name="a" value=0>
+
+            <select name="operation" id="operation" onchange="selectOnChange()">
+                <ul>
+                    <option>*</option>
+                    <option>^</option>
+                    <option>!</option>
+                    <option>fibonacci</option>
+                </ul>
+            </select>
+
+            <input type="number" id="b" name="b" value=0>
+            <div>
+                <button name="equal" onclick="calculus()">=</button>
+                <span id="result"></span>
+            </div>
+        </div>
+    </body>
+</html>
