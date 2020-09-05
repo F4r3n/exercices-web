@@ -4,8 +4,8 @@
 ## Varibles declaration
 
 A variable is declared with the keyword 'var', 'let' or 'const'
-* ```let``` declares a variable inside a scope delemited by {}. Ex :```let toto = 5```
-* ```var``` declares a variable inside a scope delimited by the function. Ex :```var toto = 5```
+* ```let``` declares a variable inside a scope delemited by {}. Ex : ```let toto = 5```
+* ```var``` declares a variable inside a scope delimited by the function. Ex : ```var toto = 5```
 * ```const``` declares a variable and its content cannot be changed. The variable should be assigned during the declaration. Ex :```const toto = 5```
 
 
@@ -110,4 +110,3 @@ function test() {
     // scope of function
 }
 ```
-

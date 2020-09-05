@@ -3,8 +3,7 @@
 ## What you will learn
 
 * Use functions
-* Use iterative or recursive
-* Use loop
+* Use if else
 
 ## Instructions
 
@@ -28,9 +27,7 @@ let result = multiply(left, right)
 
 ### Exercise 2
 
-
 Same question as exercise 1 but with power (^), factoriel (!) and fibonacci.
 
 For power you have to use only the additions.
 Fibonacci should be solved with recursive and iterative.
-
