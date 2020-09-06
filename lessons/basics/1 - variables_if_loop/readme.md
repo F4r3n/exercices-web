@@ -85,13 +85,25 @@ switch (expression) {
 
 ```js
 
-for(let i = 0; i < 3; i++) {
+for(/*init*/let i = 0;/*stop condition*/ i < 3; /*step*/i++) {
     console.log(i)
 }
 
 //0
 //1
 //2
+
+```
+
+```js
+let i = 3
+for(;/*stop condition*/ i > 0; /*step*/i--) {
+    console.log(i)
+}
+
+//3
+//2
+//1
 
 ```
 

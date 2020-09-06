@@ -4,16 +4,17 @@
 
 Each lesson is on a separate folder:
 * [basics](lessons/basics):
-*   * 1 - basic of a language
-*   * 2 - The objects
-*   * 3 - classes
-*   * 4 - async
+    * 1 - basic of a language
+    * 2 - Recursive/Iterative
+    * 3 - The objects
+    * 4 - classes
+    * 5 - async
 * UI
-*   * 1 - html manipulation
-*   * 2 - React
+    * 1 - html manipulation
+    * 2 - React
 * Network
-*   * 1 - Ajax
-*   * 2 - Socket
+    * 1 - Ajax
+    * 2 - Socket
 
 
 More info:
