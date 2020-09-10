@@ -16,7 +16,7 @@ function decrease(left) {
 
 ## Recursive
 
-An recursive algorithm is an algorithm which calls itself.
+A recursive algorithm is an algorithm which calls itself.
 
 ```js
 function decrease(left) { //recursive algorithm
