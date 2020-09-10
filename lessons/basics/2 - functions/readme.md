@@ -16,7 +16,7 @@ function decrease(left) {
 
 ## Recursive
 
-An algorithm recursive is an algorithm which calls itself.
+An recursive algorithm is an algorithm which calls itself.
 
 ```js
 function decrease(left) { //recursive algorithm
@@ -77,7 +77,7 @@ function decrease(left) { //iterative algorithm
 ```
 
 ```js
-function add(left) { //recursive algorithm
+function add(left) { //iterative algorithm
   let v = 0;
   for(let i = 0; i < left; i++) {
     v += i
