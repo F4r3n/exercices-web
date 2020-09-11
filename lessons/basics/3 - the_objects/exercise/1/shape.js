@@ -4,7 +4,7 @@ function drawShape() {
     for(let i = 0; i < array.length; ++i) {
         array[i] = new Array(radius*4);
     }
-    fillShape(array, radius, array.length)
+    fillShape(array, radius)
 
     let div = document.getElementById('result')
     div.innerHTML = ""
@@ -28,7 +28,7 @@ function drawShape() {
 //Fill the array with a value different than '' to draw the shape.
 // To fill an array use []. For example with an array = [1, 2, 3]. array[0] => 1
 
-function fillShape(array, radius, arrayLength) {
+function fillShape(array, radius) {
     //Fill the array
 
 }

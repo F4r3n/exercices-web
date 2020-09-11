@@ -42,6 +42,22 @@ for(const element of array) {
 
 ```
 
+## String
+
+A string is a character chain.
+For example:
+```js
+const a = "test"
+a[0] //t
+a[1] //e
+a[2] //s
+a[3] //t
+```
+
+It exists many functions to manipulate a string.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
 ## Objects
 
 ## Map

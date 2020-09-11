@@ -1,0 +1,13 @@
+.array1 td{
+    max-width: 100%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.array1 td.animate {
+    transform:scale(1)
+}
+
+#min, #max{
+    display: none;
+}
