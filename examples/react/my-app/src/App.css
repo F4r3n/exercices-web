@@ -1,0 +1,78 @@
+.App {
+  background-color: #282c34;
+  color: #fafafa;
+}
+
+.weatherData {
+  align-items: center;
+  margin-left: 1%;
+
+}
+
+body {
+  background-color: #282c34;
+}
+#bar {
+  margin-left: 1%;
+  margin-top: 1em;
+  min-height: 1vh;
+}
+#searchBar {
+align-items: center;
+display: flex;
+}
+
+.App #searchBar {
+  font-size: calc(5px + 2vmin);
+}
+
+#searchField {
+  font-size: calc(5px + 2vmin);
+}
+
+.searchButton {
+  font-size: calc(9px + 2vmin);
+  vertical-align: middle;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:#fafafa;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.specialButton {
+  background-color:#1da5ca;
+  color:#fafafa;
+  border-radius: 10%;
+  font-size: calc(10px + 2vmin);
+}
