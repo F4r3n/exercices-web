@@ -5,8 +5,47 @@
 
 .weatherData {
   align-items: center;
-  margin-left: 1%;
+  margin-left: 5%;
 
+}
+
+.weather_temp_add {
+  font-size: small;
+}
+
+.weather_city {
+  font-size: large;
+}
+
+.weather_main_container {
+  display: flex;
+  margin-top: 1%;
+  margin-left: 5%;
+}
+
+.weather_main_left {
+  flex: 0 0 20%;
+}
+
+.weather_main_right {
+  flex: 10%;
+  margin-top: 20px;
+}
+
+.weather_temp {
+  margin-top: -10px;
+  display: flex;
+}
+
+.weather_main_temp {
+  font-size:xxx-large;
+  flex: 0 0 1%;
+}
+
+.weather_main_kind {
+  font-size:large;
+  flex: 1;
+  margin-top: 15px;
 }
 
 body {

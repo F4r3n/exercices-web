@@ -7,10 +7,26 @@ class WeatherData extends Component{
   render() {
   return (
     <div className="weatherData">
-      City: {this.props.info.city}
-      <ul>
-        <li>Temperature {this.props.info.temp}°C</li>
-      </ul>
+      <div className="weather_city">
+        {this.props.info.city}
+      </div>
+      <div className="weather_main_container">
+        <div className="weather_main_left">
+          <div className="weather_temp_add">
+        {this.props.info.temp.min}°&darr; {this.props.info.temp.max}°&uarr;
+        </div>
+        <div className="weather_temp">
+          <div className="weather_main_temp">{this.props.info.temp.temp}</div>
+          <div className="weather_main_kind">°C</div>
+        </div>
+      </div>
+      <div className="weather_main_right">
+        <img src={this.props.info.weather.image}></img>
+        </div>
+      </div>
+
+    
+
     </div>
   )
   }
@@ -54,7 +70,8 @@ class App extends React.Component {
     super()
     this.state =  {
       city: "London",
-      temp: 0
+      temp: {temp : 0, min : 0, max : 0, feels : 0},
+      weather: {title : "unknown", description: "unknonw", image: ""}
     }
   }
   retrieveData(inParams, callback) {
@@ -82,9 +99,13 @@ class App extends React.Component {
 }
 
   processData(content) {
-    console.log(content)
     this.setState({city: content.city, 
-                  temp : content.temp.temp
+                  temp : { temp : content.temp.temp,
+                            min : content.temp.temp_min,
+                            max : content.temp.temp_max,
+                            feels : content.temp.feels_like
+                        },
+                  weather: content.weather
                 }
               )
   }
