@@ -5,13 +5,19 @@
 
 .weatherData {
   align-items: center;
-  margin-left: 5%;
+  margin-left: 1%;
 
+}
+
+#weather_icon {
+  width: 128px;
+  height: 128px;
 }
 
 .weather_temp_add {
   font-size: small;
 }
+
 
 .weather_city {
   font-size: large;
@@ -20,7 +26,7 @@
 .weather_main_container {
   display: flex;
   margin-top: 1%;
-  margin-left: 5%;
+  margin-left: 4%;
 }
 
 .weather_main_left {
@@ -47,6 +53,8 @@
   flex: 1;
   margin-top: 15px;
 }
+
+
 
 body {
   background-color: #282c34;

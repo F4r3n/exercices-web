@@ -1,35 +1,74 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './App.css';
 
 
-class WeatherData extends Component{
+function WeatherData(props){
+  const [loadedObj, setLoaded] = useState({loaded : false});
 
-  render() {
+  useEffect(() => {
+
+    console.log(loadedObj.loaded)
+    if(loadedObj.loaded) {
+      let icon = document.getElementById("weather_icon").contentDocument;
+      let grid = icon.getElementById("Grid_1_");
+      if(grid !== null)
+      {
+        grid.setAttribute("display", "none")
+      }
+      let svg = null;
+      for(let e of icon.childNodes) {
+        if(e.tagName === "svg") {
+          svg = e;
+          break;
+        }
+      }
+      document.getElementById("weather_icon").style.visibility="visible"
+
+      if(svg != null) {
+        svg.setAttribute("width", "128px");
+        svg.setAttribute("height", "128px");
+        let path = svg.getElementsByTagName("path")[0]
+        path.setAttribute("fill", "#FAFAFA")
+      }
+    
+
+      setLoaded({loaded : false})
+    }
+
+  });
+
+
   return (
     <div className="weatherData">
       <div className="weather_city">
-        {this.props.info.city}
+        {props.info.city}
       </div>
       <div className="weather_main_container">
         <div className="weather_main_left">
+          <object id="weather_icon" data={props.info.weather.image} type="image/svg+xml"
+            onLoad={() => {if(props.info.weather.image !== "")
+            document.getElementById("weather_icon").style.visibility="hidden";
+
+                      setLoaded({loaded : true})}
+                    }
+          >
+
+          </object>
+        </div>
+        <div className="weather_main_right">
+      
           <div className="weather_temp_add">
-        {this.props.info.temp.min}°&darr; {this.props.info.temp.max}°&uarr;
-        </div>
-        <div className="weather_temp">
-          <div className="weather_main_temp">{this.props.info.temp.temp}</div>
-          <div className="weather_main_kind">°C</div>
-        </div>
-      </div>
-      <div className="weather_main_right">
-        <img src={this.props.info.weather.image}></img>
+            {props.info.temp.min}°&darr; {props.info.temp.max}°&uarr;
+          </div>
+          <div className="weather_temp">
+            <div className="weather_main_temp">{props.info.temp.temp}</div>
+            <div className="weather_main_kind">°C</div>
+          </div>
         </div>
       </div>
-
-    
-
     </div>
-  )
-  }
+  );
+  
 }
 
 
@@ -99,6 +138,7 @@ class App extends React.Component {
 }
 
   processData(content) {
+    console.log("process")
     this.setState({city: content.city, 
                   temp : { temp : content.temp.temp,
                             min : content.temp.temp_min,
